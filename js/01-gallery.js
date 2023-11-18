@@ -22,8 +22,8 @@ function onClick(event) {
       }
 
       const instance = basicLightbox.create(`
-      <div ><img src="${event.target.dataset.source}">
-      </div>`
+      <img alt="${event.target.alt}" src="${event.target.dataset.source}" >
+      `
        )
       
     instance.show()

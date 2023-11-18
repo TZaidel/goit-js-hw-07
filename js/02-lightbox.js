@@ -14,14 +14,5 @@ function createElement(gallery) {
     const element = galleryItems.map(createElement).join('')
 galleryList.insertAdjacentHTML('beforeend', element)
     
-galleryList.addEventListener('click', onClick)
 
-function onClick(event) {
-    event.preventDefault()
-    if (event.target.nodeName !== 'IMG') {
-        return
-    }
-
-    let lightbox = new SimpleLightbox('.gallery a', { captionData: 'alt', captionDelay: 250 });
-//як зробити, щоб підпис було видно?
-}
+    let lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
